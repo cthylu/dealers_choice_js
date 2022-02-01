@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .boardgame-list, .boardgame-page-content {
+    width: 950px;
+    margin: 40px auto;
+  }
+
+  .boardgame-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 8px 18px;
+  }
+  .boardgame-row:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .rank {
+    width: 10%;
+  }
+  .image {
+    width: 20%;
+  }
+  .title {
+    width: 50%;
+  }
+  .rating, .voters {
+    width: 10%;
+  }
+
+  
+  .boardgame-page-content {
+    display: flex;
+  }
+  .boardgame-page-content h1 {
+      margin-left: .5em;
+  }
+  .title-row {
+    display: flex;
+    align-items: center;
+  }
