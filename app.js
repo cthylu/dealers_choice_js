@@ -1,12 +1,13 @@
-const morgan = require('morgan');
 const express = require("express");
 const app = express();
 const listBank = require('./listBank');
+const path = require('path');
 
-app.use(morgan('dev'));
-app.use(express.static('public'));
+//app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+//app.get('/styles.css', (req, res) => res.sendFile(path.join(__dirname, 'styles.css')));
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
     const games = listBank.list();
     res.send(`
     <!DOCTYPE html>

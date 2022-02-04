@@ -12,13 +12,12 @@ const data = [
   ];
 
   const list = () => {
-    return [...data] // Notice that we're returning a copy of the array, so the original data is safe. This is called 'immutability'.
+    return [...data];
   }; 
   
   const find = (rank) => {
     const game = data.find(post => post.rank === +rank);
-    return {...game}; // Again, we copy the post data before returning so the original information is safe.
+    return {...game};
   }
   
-  module.exports = { list: list, find: find // list, find
-  };
+  module.exports = { list, find };
